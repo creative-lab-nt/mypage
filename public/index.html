@@ -42,14 +42,11 @@
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="メニューを開く">☰</button>
           <nav class="nav" id="primary-nav" aria-label="主要ナビゲーション">
             <ul class="nav__list">
-              <li><a href="#concerns">不安</a></li>
               <li><a href="#points">ポイント</a></li>
               <li><a href="#process">流れ</a></li>
               <li><a href="#pricing">料金</a></li>
-              <li><a href="#closing">相談</a></li>
               <li><a href="#works">ポートフォリオ</a></li>
-              <li><a href="#profile">プロフィール</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#faq">Q&amp;A</a></li>
             </ul>
           </nav>
         </div>
@@ -66,14 +63,7 @@
           <p class="section__lead reveal">
             LPから数ページの小規模HP作ります。
           </p>
-          <div class="section__actions">
-            <a
-              href="#works"
-              class="btn btn-primary section__cta"
-              aria-label="ポートフォリオを見る（ヒーロー）"
-              >ポートフォリオを見る</a
-            >
-          </div>
+          <!-- ヒーローではCTAを表示しない -->
         </div>
       </section>
 
@@ -84,22 +74,15 @@
         aria-label="依頼前の不安"
       >
         <div class="container container--narrow">
-          <h2 class="section__title reveal">依頼前の不安</h2>
-          <p class="section__lead reveal">
-            初めてのご依頼でも安心して進められるよう、よくある不安を想定して事前に対策をご用意しています。
-          </p>
+          <h2 class="section__title reveal">こんなお悩みありませんか</h2>
+          <p class="section__lead reveal">よくあるお悩みを厳選してまとめました。</p>
           <ul class="list-bullets reveal">
             <li>料金が膨らまないか不安</li>
             <li>納期に間に合うか心配</li>
-            <li>要件が曖昧でうまく伝えられない</li>
             <li>何を伝えればいいのか分からない</li>
             <li>デザインの方向性が決めきれない</li>
-            <li>修正回数や範囲がわからない</li>
-            <li>修正を依頼すると追加費用がかかるのが不安</li>
-            <li>スマホで見たら崩れたり、遅くならないか不安</li>
-            <li>SEOや表示速度が気になる</li>
+            <li>スマホ表示が崩れたり遅くならないか不安</li>
             <li>納品後の保守・更新が不安</li>
-            <li>テキスト/画像の準備が大変</li>
           </ul>
           <div class="section__actions">
             <a
@@ -112,37 +95,25 @@
         </div>
       </section>
 
-      <!-- 3. 不安を解消する4つのポイント（白） -->
-      <section id="points" class="section" aria-label="不安を解消する4つのポイント">
+      <!-- 3. 不安を解消する3つのポイント（白） -->
+      <section id="points" class="section" aria-label="不安を解消する3つのポイント">
         <div class="container">
-          <h2 class="section__title reveal">不安を解消する4つのポイント</h2>
+          <h2 class="section__title reveal">不安を解消する3つのポイント</h2>
           <p class="section__lead reveal">
             ご依頼前の不安に、具体的な対策でお応えします。
           </p>
           <div class="cards reveal" role="list">
             <article class="card" role="listitem">
-              <h3 class="card__title">ヒアリングテンプレで要点整理をまるっと代行</h3>
-              <p class="card__text">
-                初回ヒアリングテンプレと見本ワークシートで、要点だけ共有いただければ前に進めます。
-              </p>
+              <h3 class="card__title">ヒアリング×イメージで要点を形に</h3>
+              <p class="card__text">ヒアリングテンプレと見本ワークで、ざっくりイメージから最短で構成化します。</p>
             </article>
             <article class="card" role="listitem">
-              <h3 class="card__title">修正無制限：納得いくまで何度でも対応</h3>
-              <p class="card__text">
-                合意した範囲内でのデザイン/文言調整は回数無制限。納得いくまでブラッシュアップします。
-              </p>
+              <h3 class="card__title">修正無制限：納得いくまで対応</h3>
+              <p class="card__text">合意範囲内のデザイン/文言は回数無制限でブラッシュアップします。</p>
             </article>
             <article class="card" role="listitem">
-              <h3 class="card__title">レスポンシブ対応：スマホでもPCでも快適に表示</h3>
-              <p class="card__text">
-                モバイルファースト設計で主要端末を検証。表示速度や可読性にも配慮します。
-              </p>
-            </article>
-            <article class="card" role="listitem">
-              <h3 class="card__title">イメージでOK：方向性だけ伝えてください</h3>
-              <p class="card__text">
-                ざっくりした方向性だけでも問題ありません。こちらで形にしてご提案します。
-              </p>
+              <h3 class="card__title">レスポンシブ最適化</h3>
+              <p class="card__text">スマホでもPCでも快適に。表示速度と可読性に配慮します。</p>
             </article>
           </div>
           <div class="section__actions">
@@ -167,27 +138,34 @@
           <p class="section__lead reveal">
             はじめての方でも迷わない進め方で、要件整理から公開まで伴走します。
           </p>
-          <ol class="steps reveal">
-            <li>
-              <strong>1. ヒアリング（丁寧に要点整理）</strong>
+          <ol class="steps steps--tiles reveal" aria-label="制作の流れ">
+            <li class="step">
+              <figure class="step__thumb step__thumb--1" aria-hidden="true"></figure>
+              <h3 class="step__title">ヒアリング（丁寧に要点整理）</h3>
             </li>
-            <li>
-              <strong>2. 構成案の共有</strong>（サイトマップ/ワイヤー素案を合意）
+            <li class="step">
+              <figure class="step__thumb step__thumb--2" aria-hidden="true"></figure>
+              <h3 class="step__title">構成案の共有（サイトマップ/ワイヤー）</h3>
             </li>
-            <li>
-              <strong>3. デザイン初稿制作</strong>（方向性・配色・タイポを確認）
+            <li class="step">
+              <figure class="step__thumb step__thumb--3" aria-hidden="true"></figure>
+              <h3 class="step__title">デザイン初稿制作（方向性・配色・タイポ）</h3>
             </li>
-            <li>
-              <strong>4. 調整・ブラッシュアップ</strong>（フィードバック反映／細部まで磨き込み）
+            <li class="step">
+              <figure class="step__thumb step__thumb--4" aria-hidden="true"></figure>
+              <h3 class="step__title">調整・ブラッシュアップ（フィードバック反映）</h3>
             </li>
-            <li>
-              <strong>5. 実装</strong>（レスポンシブ/アクセシビリティ/速度最適化）
+            <li class="step">
+              <figure class="step__thumb step__thumb--5" aria-hidden="true"></figure>
+              <h3 class="step__title">実装（レスポンシブ/アクセシビリティ/速度）</h3>
             </li>
-            <li>
-              <strong>6. 検証・レビュー・修正</strong>（主要端末で検証／必要なだけ対応）
+            <li class="step">
+              <figure class="step__thumb step__thumb--6" aria-hidden="true"></figure>
+              <h3 class="step__title">検証・レビュー・修正（主要端末）</h3>
             </li>
-            <li>
-              <strong>7. 納品・公開サポート</strong>（運用ガイド／微修正対応）
+            <li class="step">
+              <figure class="step__thumb step__thumb--7" aria-hidden="true"></figure>
+              <h3 class="step__title">納品・公開サポート（運用ガイド）</h3>
             </li>
           </ol>
           <div class="section__actions">

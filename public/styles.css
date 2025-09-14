@@ -114,6 +114,16 @@ img, svg, video { max-width: 100%; height: auto; }
 
 /* Steps */
 .steps { margin: 0; padding-left: 0; display: grid; gap: 10px; font-size: clamp(16px, 1.2vw, 18px); list-style-position: inside; text-align: center; }
+.steps--tiles { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; list-style: decimal; }
+.step { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+.step__title { margin: 0; font-weight: 800; font-size: clamp(16px, 2.4vw, 18px); }
+.step__thumb { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; border: 1px solid var(--border); background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+.step__thumb--2 { background: linear-gradient(135deg, #ddd6fe, #c4b5fd); }
+.step__thumb--3 { background: linear-gradient(135deg, #fecaca, #fca5a5); }
+.step__thumb--4 { background: linear-gradient(135deg, #fde68a, #fcd34d); }
+.step__thumb--5 { background: linear-gradient(135deg, #bbf7d0, #86efac); }
+.step__thumb--6 { background: linear-gradient(135deg, #a7f3d0, #6ee7b7); }
+.step__thumb--7 { background: linear-gradient(135deg, #f5d0fe, #e879f9); }
 .steps li { margin: 0; }
 
 /* Pricing common */
