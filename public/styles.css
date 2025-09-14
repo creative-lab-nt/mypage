@@ -85,6 +85,10 @@ img, svg, video { max-width: 100%; height: auto; }
 .list-bullets { margin: 0; padding-left: 0; font-size: clamp(16px, 1.2vw, 18px); list-style-position: inside; text-align: center; }
 .list-bullets li { margin: 6px 0; }
 
+/* お悩みセクションは左揃えでインデントを揃える */
+#concerns .list-bullets { text-align: left; list-style-position: outside; padding-left: 1.2rem; max-width: 760px; margin-inline: auto; }
+#concerns .list-bullets li { text-align: left; }
+
 /* Cards grid */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; }
 .card { display: flex; flex-direction: column; gap: 8px; padding: 24px; border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.04); text-align: center; }
@@ -114,8 +118,9 @@ img, svg, video { max-width: 100%; height: auto; }
 
 /* Steps */
 .steps { margin: 0; padding-left: 0; display: grid; gap: 10px; font-size: clamp(16px, 1.2vw, 18px); list-style-position: inside; text-align: center; }
-.steps--tiles { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; list-style: decimal; }
+.steps--tiles { grid-template-columns: 1fr; gap: 16px; counter-reset: step; }
 .step { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+.step::before { content: counter(step); counter-increment: step; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 9999px; background: var(--bg-alt); color: var(--accent-600); font-weight: 800; margin-bottom: 8px; }
 .step__title { margin: 0; font-weight: 800; font-size: clamp(16px, 2.4vw, 18px); }
 .step__thumb { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; border: 1px solid var(--border); background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
 .step__thumb--2 { background: linear-gradient(135deg, #ddd6fe, #c4b5fd); }
