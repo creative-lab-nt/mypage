@@ -111,6 +111,7 @@ img, svg, video { max-width: 100%; height: auto; }
 .works-grid .work__thumb--alt { background: linear-gradient(135deg, #ddd6fe, #c4b5fd); }
 .works-grid .work__thumb--alt2 { background: linear-gradient(135deg, #fecaca, #fca5a5); }
 /* Ensure picture images fill card width */
+.work__media, .step__media { display: block; width: 100%; }
 .work__media img, .step__media img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--border); }
 
 /* FAQ */
