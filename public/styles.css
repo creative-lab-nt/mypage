@@ -150,3 +150,13 @@ img, svg, video { max-width: 100%; height: auto; }
   * { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* ===== Overrides (alignment & flow) ===== */
+/* お悩みセクションの箇条書きを左揃えに強制 */
+#concerns .list-bullets { text-align: left !important; list-style-position: outside !important; list-style-type: disc; padding-left: 1.25rem; max-width: 760px; margin-inline: auto; }
+#concerns .list-bullets li { text-align: left !important; margin-left: 0; text-indent: 0; display: list-item; }
+
+/* 制作の流れ：縦1列固定＆自前カウンターで番号表示 */
+.steps, .steps--tiles { list-style: none !important; padding-left: 0 !important; }
+.steps--tiles { grid-template-columns: 1fr !important; gap: 16px; counter-reset: step; max-width: 760px; margin-inline: auto; }
+.step::before { content: counter(step); counter-increment: step; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 9999px; background: var(--bg-alt); color: var(--accent-600); font-weight: 800; margin-bottom: 8px; }
