@@ -1,0 +1,83 @@
+[
+  {
+    "placement": "steps/1",
+    "query": "meeting, notebook, brainstorm",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?meeting,notebook,brainstorm",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "steps/2",
+    "query": "wireframe, ux, sketch",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?wireframe,ux,sketch",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "steps/3",
+    "query": "design, typography, moodboard",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?design,typography,moodboard",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "steps/4",
+    "query": "collaboration, feedback, design",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?collaboration,feedback,design",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "steps/5",
+    "query": "code, frontend, developer",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?code,frontend,developer",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "steps/6",
+    "query": "testing, usability, mobile",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?testing,usability,mobile",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "steps/7",
+    "query": "launch, rocket, website",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?launch,rocket,website",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "works/1",
+    "query": "landing, website, design",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?landing,website,design",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "works/2",
+    "query": "corporate, website, design",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?corporate,website,design",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "works/3",
+    "query": "campaign, landing, form",
+    "source": "Unsplash Source",
+    "license": "Unsplash License (attribution recommended)",
+    "url": "https://source.unsplash.com/1280x720/?campaign,landing,form",
+    "note": "Randomized image per request; lock a specific photo ID later."
+  }
+]
+

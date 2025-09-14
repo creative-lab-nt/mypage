@@ -1,0 +1,68 @@
+name: Fetch and Optimize Images
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - .github/workflows/fetch-optimize.yml
+      - scripts/**
+      - public/index.html
+
+jobs:
+  fetch-optimize:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Prepare dirs
+        run: |
+          mkdir -p assets/raw public/images/steps public/images/works
+
+      - name: Download originals (Unsplash Source with retry)
+        run: |
+          set -e
+          R='--retry 5 --retry-delay 2 --retry-connrefused'
+          curl -L --fail $R -o assets/raw/step-1.jpg "https://source.unsplash.com/1920x1080/?meeting,notebook,brainstorm"
+          curl -L --fail $R -o assets/raw/step-2.jpg "https://source.unsplash.com/1920x1080/?wireframe,ux,sketch"
+          curl -L --fail $R -o assets/raw/step-3.jpg "https://source.unsplash.com/1920x1080/?design,typography,moodboard"
+          curl -L --fail $R -o assets/raw/step-4.jpg "https://source.unsplash.com/1920x1080/?collaboration,feedback,design"
+          curl -L --fail $R -o assets/raw/step-5.jpg "https://source.unsplash.com/1920x1080/?code,frontend,developer"
+          curl -L --fail $R -o assets/raw/step-6.jpg "https://source.unsplash.com/1920x1080/?testing,usability,mobile"
+          curl -L --fail $R -o assets/raw/step-7.jpg "https://source.unsplash.com/1920x1080/?launch,rocket,website"
+          curl -L --fail $R -o assets/raw/work-1.jpg "https://source.unsplash.com/1920x1080/?landing,website,design"
+          curl -L --fail $R -o assets/raw/work-2.jpg "https://source.unsplash.com/1920x1080/?corporate,website,design"
+          curl -L --fail $R -o assets/raw/work-3.jpg "https://source.unsplash.com/1920x1080/?campaign,landing,form"
+
+      - name: Resize with sharp-cli
+        run: |
+          npx --yes sharp-cli assets/raw/step-1.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/steps/step-1-w{w}.jpg
+          npx --yes sharp-cli assets/raw/step-2.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/steps/step-2-w{w}.jpg
+          npx --yes sharp-cli assets/raw/step-3.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/steps/step-3-w{w}.jpg
+          npx --yes sharp-cli assets/raw/step-4.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/steps/step-4-w{w}.jpg
+          npx --yes sharp-cli assets/raw/step-5.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/steps/step-5-w{w}.jpg
+          npx --yes sharp-cli assets/raw/step-6.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/steps/step-6-w{w}.jpg
+          npx --yes sharp-cli assets/raw/step-7.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/steps/step-7-w{w}.jpg
+          npx --yes sharp-cli assets/raw/work-1.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/works/work-1-w{w}.jpg
+          npx --yes sharp-cli assets/raw/work-2.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/works/work-2-w{w}.jpg
+          npx --yes sharp-cli assets/raw/work-3.jpg --resize 480,768,1080,1440,1920 --quality 80 -o public/images/works/work-3-w{w}.jpg
+
+      - name: Update HTML to local srcset and disable JS auto-replace
+        run: |
+          node -v
+          node scripts/update-to-local.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add public/index.html public/images public/main.js assets/raw
+          git commit -m "chore(images): fetch + optimize Unsplash images and switch to local srcset"
+          git push

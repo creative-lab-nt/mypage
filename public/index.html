@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ポートフォリオ | モダンでスタイリッシュなWeb制作</title>
+    <meta
+      name="description"
+      content="丸投げOK。修正無制限・レスポンシブ対応込み。納得のWebサイト制作。"
+    />
+    <!-- OG/Twitter 基本 -->
+    <meta property="og:title" content="ポートフォリオ | モダンでスタイリッシュなWeb制作" />
+    <meta property="og:description" content="丸投げOK。修正無制限・レスポンシブ対応込み。納得のWebサイト制作。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ポートフォリオ | モダンでスタイリッシュなWeb制作" />
+    <meta name="twitter:description" content="丸投げOK。修正無制限・レスポンシブ対応込み。納得のWebサイト制作。" />
+    <link rel="stylesheet" href="/mypage/public/styles.css" />
+    <!-- JSON-LD（雛形・後で差し替え） -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ポートフォリオ",
+        "url": "",
+        "description": "丸投げOK。修正無制限・レスポンシブ対応込み。納得のWebサイト制作。",
+        "publisher": {
+          "@type": "Person",
+          "name": "あなたの名前"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">本文へスキップ</a>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="site-logo" href="#hero" aria-label="トップへ">Portfolio</a>
+          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="メニューを開く">☰</button>
+          <nav class="nav" id="primary-nav" aria-label="主要ナビゲーション">
+            <ul class="nav__list">
+              <li><a href="#points">ポイント</a></li>
+              <li><a href="#process">流れ</a></li>
+              <li><a href="#pricing">料金</a></li>
+              <li><a href="#works">ポートフォリオ</a></li>
+              <li><a href="#faq">Q&amp;A</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- 1. ヒーロー（白） -->
+      <section id="hero" class="section" aria-label="ヒーロー">
+        <div class="container container--narrow section--center">
+          <h1 class="section__title reveal">
+            丸投げOK　納得のWebサイト制作
+          </h1>
+          <p class="section__lead reveal">
+            LPから数ページの小規模HP作ります。
+          </p>
+          <!-- ヒーローではCTAを表示しない -->
+        </div>
+      </section>
+
+      <!-- 2. 依頼前の不安（薄グレー） -->
+      <section
+        id="concerns"
+        class="section section--alt"
+        aria-label="依頼前の不安"
+      >
+        <div class="container container--narrow">
+          <h2 class="section__title reveal">こんなお悩みありませんか</h2>
+          <p class="section__lead reveal">よくあるお悩みを厳選してまとめました。</p>
+          <ul class="list-bullets reveal">
+            <li>何を伝えればいいのか分からない</li>
+            <li>修正をお願いしたら追加料金がかかるんじゃ...</li>
+            <li>スマホ表示が崩れたり遅くならないか不安</li>
+          </ul>
+          <div class="section__actions">
+            <a
+              href="#works"
+              class="btn btn-primary section__cta"
+              aria-label="ポートフォリオを見る（依頼前の不安）"
+              >ポートフォリオを見る</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 不安を解消する3つのポイント（白） -->
+      <section id="points" class="section" aria-label="不安を解消する3つのポイント">
+        <div class="container">
+          <h2 class="section__title reveal">不安を解消する3つのポイント</h2>
+          <p class="section__lead reveal">
+            ご依頼前の不安に、具体的な対策でお応えします。
+          </p>
+          <div class="cards reveal" role="list">
+            <article class="card" role="listitem">
+              <h3 class="card__title">ヒアリング×イメージで要点を形に</h3>
+              <p class="card__text">ヒアリングテンプレと見本ワークで、ざっくりイメージから最短で構成化します。</p>
+            </article>
+            <article class="card" role="listitem">
+              <h3 class="card__title">修正無制限：納得いくまで対応</h3>
+              <p class="card__text">合意範囲内のデザイン/文言は回数無制限でブラッシュアップします。</p>
+            </article>
+            <article class="card" role="listitem">
+              <h3 class="card__title">レスポンシブ最適化</h3>
+              <p class="card__text">スマホでもPCでも快適に。表示速度と可読性に配慮します。</p>
+            </article>
+          </div>
+          <div class="section__actions">
+            <a
+              href="#works"
+              class="btn btn-primary section__cta"
+              aria-label="ポートフォリオを見る（不安を解消するポイント）"
+              >ポートフォリオを見る</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 制作の流れ（ステップ｜薄グレー） -->
+      <section
+        id="process"
+        class="section section--alt"
+        aria-label="制作の流れ（ステップ）"
+      >
+        <div class="container container--narrow">
+          <h2 class="section__title reveal">制作の流れ（ステップ）</h2>
+          <p class="section__lead reveal">
+            はじめての方でも迷わない進め方で、要件整理から公開まで伴走します。
+          </p>
+          <ol class="steps steps--tiles" aria-label="制作の流れ">
+            <li class="step">
+              <picture class="step__media"><img src="/mypage/public/images/steps/step-1.svg" alt="ヒアリングのイメージ" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="step__title">ヒアリング（丁寧に要点整理）</h3>
+            </li>
+            <li class="step">
+              <picture class="step__media"><img src="/mypage/public/images/steps/step-2.svg" alt="構成案共有のイメージ" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="step__title">構成案の共有（サイトマップ/ワイヤー）</h3>
+            </li>
+            <li class="step">
+              <picture class="step__media"><img src="/mypage/public/images/steps/step-3.svg" alt="デザイン初稿のイメージ" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="step__title">デザイン初稿制作（方向性・配色・タイポ）</h3>
+            </li>
+            <li class="step">
+              <picture class="step__media"><img src="/mypage/public/images/steps/step-4.svg" alt="調整・ブラッシュアップのイメージ" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="step__title">調整・ブラッシュアップ（フィードバック反映）</h3>
+            </li>
+            <li class="step">
+              <picture class="step__media"><img src="/mypage/public/images/steps/step-5.svg" alt="実装のイメージ" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="step__title">実装（レスポンシブ/アクセシビリティ/速度）</h3>
+            </li>
+            <li class="step">
+              <picture class="step__media"><img src="/mypage/public/images/steps/step-6.svg" alt="検証・レビューのイメージ" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="step__title">検証・レビュー・修正（主要端末）</h3>
+            </li>
+            <li class="step">
+              <picture class="step__media"><img src="/mypage/public/images/steps/step-7.svg" alt="納品・公開サポートのイメージ" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="step__title">納品・公開サポート（運用ガイド）</h3>
+            </li>
+          </ol>
+          <div class="section__actions">
+            <a
+              href="#works"
+              class="btn btn-primary section__cta"
+              aria-label="ポートフォリオを見る（制作の流れ）"
+              >ポートフォリオを見る</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 料金プラン（白） -->
+      <section id="pricing" class="section" aria-label="料金プラン">
+        <div class="container">
+          <h2 class="section__title reveal">料金プラン</h2>
+          <p class="section__lead reveal">
+            目的に合わせて選べるプランをご用意しています。
+          </p>
+          <div class="cards reveal" role="list">
+            <article class="card card--tone-sky" role="listitem">
+              <h3 class="card__title">LP制作</h3>
+              <p class="card__price">40,000円〜（税込）</p>
+              <p class="card__text">1ページでサービスや商品の魅力を伝える</p>
+            </article>
+            <article class="card card--tone-blue card--featured" role="listitem">
+              <h3 class="card__title">LP＋フォーム付き</h3>
+              <p class="card__price">60,000円〜（税込）</p>
+              <p class="card__text">広告やキャンペーンに最適。ページ内で申込や問い合わせが完結</p>
+            </article>
+            <article class="card card--tone-indigo" role="listitem">
+              <h3 class="card__title">小規模HP（1〜5ページ）</h3>
+              <p class="card__price">100,000円〜（税込）</p>
+              <p class="card__text">会社概要・サービス内容・料金・アクセスを整理して伝える</p>
+            </article>
+          </div>
+
+          <div class="pricing-common reveal" aria-label="全プラン共通事項">
+            <h3 class="pricing-common__title">共通事項</h3>
+            <ul class="pricing-common__list">
+              <li>修正無制限（合意範囲内で対応）</li>
+              <li>レスポンシブ対応込み</li>
+              <li>公開後の軽微な修正対応</li>
+            </ul>
+            <p class="note">
+              ※ 表示価格は税込です。仕様追加・大幅な要件変更は別途お見積もりとなります。
+            </p>
+          </div>
+
+          <div class="section__actions">
+            <a
+              href="#works"
+              class="btn btn-primary section__cta"
+              aria-label="ポートフォリオを見る（料金プラン）"
+              >ポートフォリオを見る</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. クロージング（薄グレー） -->
+      <section id="closing" class="section section--alt" aria-label="クロージング">
+        <div class="container container--narrow section--center">
+          <h2 class="section__title reveal">まずはお気軽にご相談ください</h2>
+          <p class="section__lead reveal">
+            イメージだけでも大丈夫です。目的と伝えたい要点を丁寧に整理し、修正無制限で納得いくまで仕上げます。レスポンシブ対応・公開後の軽微な修正もお任せください。ご依頼はクラウドソーシング経由で承っています。『相談だけ』でも大歓迎です。納期や予算のご相談も柔軟に対応します。
+          </p>
+          <div class="section__actions">
+            <a
+              href="#works"
+              class="btn btn-primary section__cta"
+              aria-label="ポートフォリオを見る（クロージング）"
+              >ポートフォリオを見る</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Works（白） -->
+      <section id="works" class="section" aria-label="ポートフォリオ">
+        <div class="container">
+          <h2 class="section__title reveal">ポートフォリオ</h2>
+          <p class="section__lead reveal">実績の一部をご紹介します（ダミー）。</p>
+          <div class="cards works-grid" role="list">
+            <article class="card work" role="listitem">
+              <picture class="work__media"><img src="/mypage/public/images/works/work-1.svg" alt="LP制作（架空サービスA）のサムネイル" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="card__title">LP制作（架空サービスA）</h3>
+              <p class="card__text">役割：設計／デザイン／実装／速度最適化</p>
+            </article>
+            <article class="card work" role="listitem">
+              <picture class="work__media"><img src="/mypage/public/images/works/work-2.svg" alt="小規模サイト（架空企業B）のサムネイル" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="card__title">小規模サイト（架空企業B）</h3>
+              <p class="card__text">役割：構成／UIコンポーネント／アクセシビリティ</p>
+            </article>
+            <article class="card work" role="listitem">
+              <picture class="work__media"><img src="/mypage/public/images/works/work-3.svg" alt="キャンペーンLP＋フォームのサムネイル" loading="lazy" decoding="async" width="1280" height="720" /></picture>
+              <h3 class="card__title">キャンペーンLP＋フォーム</h3>
+              <p class="card__text">役割：デザイン／実装／計測設定（GA/GTM）</p>
+            </article>
+          </div>
+          <div class="section__actions">
+            <a href="#works" class="btn btn-primary section__cta" aria-label="ポートフォリオを見る（Works）">ポートフォリオを見る</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. プロフィール（薄グレー） -->
+      <section id="profile" class="section section--alt" aria-label="プロフィール">
+        <div class="container container--narrow">
+          <h2 class="section__title reveal">プロフィール</h2>
+          <p class="section__lead reveal">
+            あなたの名前 / フロントエンドエンジニア。LP/小規模サイトの高速制作と継続改善が得意です。
+          </p>
+          <ul class="list-bullets reveal">
+            <li>得意領域：LP制作・パフォーマンス最適化・アクセシビリティ</li>
+            <li>使用ツール：HTML/CSS/JS、Figma、Git、GA/GTM</li>
+            <li>対応時間：平日夜間・土日も調整可</li>
+          </ul>
+          <div class="section__actions">
+            <a href="#works" class="btn btn-primary section__cta" aria-label="ポートフォリオを見る（プロフィール）">ポートフォリオを見る</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. FAQ（白） -->
+      <section id="faq" class="section" aria-label="よくある質問">
+        <div class="container container--narrow">
+          <h2 class="section__title reveal">よくある質問</h2>
+          <div class="faq reveal">
+            <details>
+              <summary>修正無制限の範囲は？</summary>
+              <p>合意した仕様内でのデザイン/文言調整が対象です。仕様追加や大幅な要件変更は別途お見積もりとなります。</p>
+            </details>
+            <details>
+              <summary>納期の目安は？</summary>
+              <p>LPは1〜2週間、小規模サイトは2〜3週間が目安です。スケジュールは要件により前後します。</p>
+            </details>
+            <details>
+              <summary>素材が未準備でも大丈夫？</summary>
+              <p>問題ありません。イメージだけ共有いただければ、必要なテキスト/画像の準備を伴走します。</p>
+            </details>
+            <details>
+              <summary>支払い方法は？</summary>
+              <p>クラウドソーシング経由での決済に対応します。ご希望のプラットフォームをご指定ください。</p>
+            </details>
+          </div>
+          <div class="section__actions">
+            <a href="#works" class="btn btn-primary section__cta" aria-label="ポートフォリオを見る（FAQ）">ポートフォリオを見る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer__copy">&copy; <span id="year"></span> Portfolio</p>
+      </div>
+    </footer>
+
+    <script src="/mypage/public/main.js"></script>
+  </body>
+  </html>

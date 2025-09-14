@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g5" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#bbf7d0"/>
+      <stop offset="1" stop-color="#86efac"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g5)"/>
+  <text x="50%" y="50%" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="56" font-weight="800" fill="#065f46" text-anchor="middle" dominant-baseline="middle">Step 5: 実装</text>
+</svg>
+
