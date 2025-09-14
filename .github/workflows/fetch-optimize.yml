@@ -17,23 +17,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Prepare dirs
         run: |
           mkdir -p assets/raw public/images/steps public/images/works
 
-      - name: Download originals (Unsplash Source)
+      - name: Download originals (Unsplash Source with retry)
         run: |
           set -e
-          curl -L --fail -o assets/raw/step-1.jpg "https://source.unsplash.com/1920x1080/?meeting,notebook,brainstorm"
-          curl -L --fail -o assets/raw/step-2.jpg "https://source.unsplash.com/1920x1080/?wireframe,ux,sketch"
-          curl -L --fail -o assets/raw/step-3.jpg "https://source.unsplash.com/1920x1080/?design,typography,moodboard"
-          curl -L --fail -o assets/raw/step-4.jpg "https://source.unsplash.com/1920x1080/?collaboration,feedback,design"
-          curl -L --fail -o assets/raw/step-5.jpg "https://source.unsplash.com/1920x1080/?code,frontend,developer"
-          curl -L --fail -o assets/raw/step-6.jpg "https://source.unsplash.com/1920x1080/?testing,usability,mobile"
-          curl -L --fail -o assets/raw/step-7.jpg "https://source.unsplash.com/1920x1080/?launch,rocket,website"
-          curl -L --fail -o assets/raw/work-1.jpg "https://source.unsplash.com/1920x1080/?landing,website,design"
-          curl -L --fail -o assets/raw/work-2.jpg "https://source.unsplash.com/1920x1080/?corporate,website,design"
-          curl -L --fail -o assets/raw/work-3.jpg "https://source.unsplash.com/1920x1080/?campaign,landing,form"
+          R='--retry 5 --retry-delay 2 --retry-connrefused'
+          curl -L --fail $R -o assets/raw/step-1.jpg "https://source.unsplash.com/1920x1080/?meeting,notebook,brainstorm"
+          curl -L --fail $R -o assets/raw/step-2.jpg "https://source.unsplash.com/1920x1080/?wireframe,ux,sketch"
+          curl -L --fail $R -o assets/raw/step-3.jpg "https://source.unsplash.com/1920x1080/?design,typography,moodboard"
+          curl -L --fail $R -o assets/raw/step-4.jpg "https://source.unsplash.com/1920x1080/?collaboration,feedback,design"
+          curl -L --fail $R -o assets/raw/step-5.jpg "https://source.unsplash.com/1920x1080/?code,frontend,developer"
+          curl -L --fail $R -o assets/raw/step-6.jpg "https://source.unsplash.com/1920x1080/?testing,usability,mobile"
+          curl -L --fail $R -o assets/raw/step-7.jpg "https://source.unsplash.com/1920x1080/?launch,rocket,website"
+          curl -L --fail $R -o assets/raw/work-1.jpg "https://source.unsplash.com/1920x1080/?landing,website,design"
+          curl -L --fail $R -o assets/raw/work-2.jpg "https://source.unsplash.com/1920x1080/?corporate,website,design"
+          curl -L --fail $R -o assets/raw/work-3.jpg "https://source.unsplash.com/1920x1080/?campaign,landing,form"
 
       - name: Resize with sharp-cli
         run: |
