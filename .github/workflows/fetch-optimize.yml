@@ -2,9 +2,16 @@ name: Fetch and Optimize Images
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - .github/workflows/fetch-optimize.yml
+      - scripts/**
+      - public/index.html
 
 jobs:
   fetch-optimize:
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -53,4 +60,3 @@ jobs:
           git add public/index.html public/images public/main.js assets/raw
           git commit -m "chore(images): fetch + optimize Unsplash images and switch to local srcset"
           git push
-
