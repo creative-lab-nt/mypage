@@ -17,7 +17,7 @@ const srcset = (base) =>
   `srcset="./${base}-w480.jpg 480w, ./${base}-w768.jpg 768w, ./${base}-w1080.jpg 1080w, ./${base}-w1440.jpg 1440w, ./${base}-w1920.jpg 1920w" sizes="(min-width: 1024px) 960px, 100vw"`;
 
 // Update index.html
-let html = readFileSync('public/index.html', 'utf8');
+let html = readFileSync('index.html', 'utf8');
 for (const { key, base } of mappings) {
   const [folder, name] = key.split('/');
   const localDefault = `./${base}-w1080.jpg`;
@@ -25,12 +25,14 @@ for (const { key, base } of mappings) {
   const regex = new RegExp(`(<picture[^>]*>\s*<img[^>]*src=")(?:[^"]*${name}[^\"]*|https?:[^\"]*)("[^>]*>)`, 'g');
   html = html.replace(regex, `$1${localDefault}" ${srcset(base)}$2`);
 }
-writeFileSync('public/index.html', html, 'utf8');
+writeFileSync('index.html', html, 'utf8');
 
 // Update main.js: remove Unsplash auto-replace block if present
-let js = readFileSync('public/main.js', 'utf8');
-js = js.replace(/\/\/ 画像の自動差し替え（Unsplash Source）[\s\S]*?\(\)\;\n?/, '');
-writeFileSync('public/main.js', js, 'utf8');
+let js = readFileSync('main.js', 'utf8');
+js = js.replace(/\/\/ 画像�E自動差し替え！Ensplash Source�E�[\s\S]*?\(\)\;\n?/, '');
+writeFileSync('main.js', js, 'utf8');
 
 console.log('Updated index.html to local srcset images and removed Unsplash auto-replace.');
+
+
 
