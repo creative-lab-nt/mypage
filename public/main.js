@@ -39,28 +39,4 @@ if (toggle && nav) {
   });
 }
 
-// 画像の自動差し替え（Unsplash Source）
-(() => {
-  const stepImages = [
-    'https://source.unsplash.com/1280x720/?meeting,notebook,brainstorm',
-    'https://source.unsplash.com/1280x720/?wireframe,ux,sketch',
-    'https://source.unsplash.com/1280x720/?design,typography,moodboard',
-    'https://source.unsplash.com/1280x720/?collaboration,feedback,design',
-    'https://source.unsplash.com/1280x720/?code,frontend,developer',
-    'https://source.unsplash.com/1280x720/?testing,usability,mobile',
-    'https://source.unsplash.com/1280x720/?launch,rocket,website',
-  ];
-  const workImages = [
-    'https://source.unsplash.com/1280x720/?landing,website,design',
-    'https://source.unsplash.com/1280x720/?corporate,website,design',
-    'https://source.unsplash.com/1280x720/?campaign,landing,form',
-  ];
-  document.querySelectorAll('.step__media img').forEach((img, i) => {
-    if (stepImages[i]) img.src = stepImages[i];
-    img.referrerPolicy = 'no-referrer';
-  });
-  document.querySelectorAll('.work__media img').forEach((img, i) => {
-    if (workImages[i]) img.src = workImages[i];
-    img.referrerPolicy = 'no-referrer';
-  });
-})();
+// 画像はローカルを既定表示（固定化後のsrcsetに自動で切替済み想定）
