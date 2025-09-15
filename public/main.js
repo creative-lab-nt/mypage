@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 // 年表示
 document.getElementById('year').textContent = new Date().getFullYear();
 

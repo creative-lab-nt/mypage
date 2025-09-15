@@ -145,8 +145,12 @@ img, svg, video { max-width: 100%; height: auto; }
 .site-footer__copy { margin: 0; color: var(--muted); font-size: 0.95rem; text-align: center; }
 
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(8px); will-change: transform, opacity; }
-.reveal.is-visible { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s ease; }
+.reveal { will-change: transform, opacity; }
+.reveal.is-visible { transition: opacity .5s ease, transform .5s ease; }
+/* JS有効時のみフェードインを適用。JS無効/読み込めない場合は常に表示 */
+html.js .reveal { opacity: 0; transform: translateY(8px); }
+html.js .reveal.is-visible { opacity: 1; transform: none; }
+html:not(.js) .reveal { opacity: 1 !important; transform: none !important; }
 
 /* Motion reduce */
 @media (prefers-reduced-motion: reduce) {
@@ -163,3 +167,22 @@ img, svg, video { max-width: 100%; height: auto; }
 .steps, .steps--tiles { list-style: none !important; padding-left: 0 !important; }
 .steps--tiles { grid-template-columns: 1fr !important; gap: 16px; counter-reset: step; max-width: 760px; margin-inline: auto; }
 .step::before { content: counter(step); counter-increment: step; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 9999px; background: var(--bg-alt); color: var(--accent-600); font-weight: 800; margin-bottom: 8px; }
+
+/* ===== Readability overlay for background images ===== */
+/* 背景画像を適用したセクションでも文字が読めるように薄いオーバーレイを乗せる */
+.section[data-image-target="bg"] { position: relative; z-index: 0; }
+.section[data-image-target="bg"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* 通常背景（白系）に合わせて明るめオーバーレイ */
+  background: linear-gradient(0deg, rgba(255,255,255,.86), rgba(255,255,255,.86));
+  z-index: 0;
+  pointer-events: none;
+}
+.section.section--alt[data-image-target="bg"]::before {
+  /* 代替背景（薄グレー）用に色味を合わせる */
+  background: linear-gradient(0deg, rgba(249,250,251,.90), rgba(249,250,251,.90));
+}
+/* セクション内の内容を前面に */
+.section[data-image-target="bg"] > * { position: relative; z-index: 1; }

@@ -3,6 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+    <style>
+      /* 背景画像上の可読性を高めるオーバーレイ */
+      .section[data-image-target="bg"] { position: relative; z-index: 0; }
+      .section[data-image-target="bg"]::before {
+        content: ""; position: absolute; inset: 0;
+        background: linear-gradient(0deg, rgba(255,255,255,.86), rgba(255,255,255,.86));
+        z-index: 0; pointer-events: none;
+      }
+      .section.section--alt[data-image-target="bg"]::before {
+        background: linear-gradient(0deg, rgba(249,250,251,.90), rgba(249,250,251,.90));
+      }
+      .section[data-image-target="bg"] > * { position: relative; z-index: 1; }
+    </style>
     <title>ポートフォリオ | モダンでスタイリッシュなWeb制作</title>
     <meta
       name="description"
