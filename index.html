@@ -30,7 +30,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ポートフォリオ | モダンでスタイリッシュなWeb制作" />
     <meta name="twitter:description" content="丸投げOK。修正無制限・レスポンシブ対応込み。納得のWebサイト制作。" />
-    <link rel="stylesheet" href="/mypage/styles.css" />
+    <link rel="stylesheet" href="/mypage/public/styles.css" />
     <!-- JSON-LD（雛形・後で差し替え） -->
     <script type="application/ld+json">
       {
@@ -337,6 +337,28 @@
       </div>
     </footer>
 
+    <script>
+      // セクション背景を適用（public/images に保存済みの画像を使用）
+      (function(){
+        var bg = {
+          hero: '/mypage/public/images/hero-urban_vintage-4WqTP1dZ5wA-w1920x1080.webp',
+          concerns: '/mypage/public/images/concerns-mr_mgk-Gz6TmqDEGrQ-w1600x900.webp',
+          points: '/mypage/public/images/points-pawel_czerwinski-gjf6lzfPROk-w1600x900.webp',
+          pricing: '/mypage/public/images/pricing-mglazier98-9Liis2iHr8k-w1600x900.webp',
+          closing: '/mypage/public/images/closing-othentikisra-cKcRIZ3Xytg-w1600x900.webp',
+          profile: '/mypage/public/images/profile-nublson-VXUem-SEtJg-w1600x900.webp',
+          faq: '/mypage/public/images/faq-themelessly-eEpIAx5mGOI-w1600x900.webp'
+        };
+        for (var id in bg){
+          var el = document.getElementById(id);
+          if(!el) continue;
+          el.style.backgroundImage = "url('"+bg[id]+"')";
+          el.style.backgroundSize = 'cover';
+          el.style.backgroundPosition = 'center';
+          el.style.backgroundRepeat = 'no-repeat';
+        }
+      })();
+    </script>
     <script src="/mypage/main.js"></script>
   </body>
   </html>
