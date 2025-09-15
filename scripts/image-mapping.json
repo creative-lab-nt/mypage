@@ -1,0 +1,10 @@
+{
+  "hero": { "query": "modern minimal workspace desk, light, wide", "alt": "モダンなワークスペース", "w": 1920, "h": 1080, "target": "bg" },
+  "concerns": { "query": "abstract minimal texture gray", "alt": "抽象的な質感の背景", "w": 1600, "h": 900, "target": "bg" },
+  "points": { "query": "abstract gradient shapes blue purple", "alt": "抽象的なグラデーション", "w": 1600, "h": 900, "target": "bg" },
+  "pricing": { "query": "geometric pattern light background", "alt": "幾何学模様の背景", "w": 1600, "h": 900, "target": "bg" },
+  "closing": { "query": "team collaboration minimal light", "alt": "チームのコラボレーション", "w": 1600, "h": 900, "target": "bg" },
+  "profile": { "query": "developer workspace laptop minimal", "alt": "開発者のワークスペース", "w": 1600, "h": 900, "target": "bg" },
+  "faq": { "query": "question mark pattern minimal", "alt": "クエスチョンマークの抽象背景", "w": 1600, "h": 900, "target": "bg" }
+}
+

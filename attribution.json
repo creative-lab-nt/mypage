@@ -78,6 +78,89 @@
     "license": "Unsplash License (attribution recommended)",
     "url": "https://source.unsplash.com/1280x720/?campaign,landing,form",
     "note": "Randomized image per request; lock a specific photo ID later."
+  },
+  {
+    "placement": "hero",
+    "id": "4WqTP1dZ5wA",
+    "file": "/mypage/public/images/hero-urban_vintage-4WqTP1dZ5wA-w1920x1080.webp",
+    "title": "For sale! Curated mid century & postmodern furniture. https://urban-vintage.ro/",
+    "author": "Urban Vintage",
+    "username": "urban_vintage",
+    "url": "https://unsplash.com/photos/a-desk-with-a-chair-and-a-computer-on-it-4WqTP1dZ5wA",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "query": "modern minimal workspace desk, light, wide"
+  },
+  {
+    "placement": "concerns",
+    "id": "Gz6TmqDEGrQ",
+    "file": "/mypage/public/images/concerns-mr_mgk-Gz6TmqDEGrQ-w1600x900.webp",
+    "title": "a close-up of a microscope",
+    "author": "Marios Gkortsilas",
+    "username": "mr_mgk",
+    "url": "https://unsplash.com/photos/a-close-up-of-a-microscope-Gz6TmqDEGrQ",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "query": "abstract minimal texture gray"
+  },
+  {
+    "placement": "points",
+    "id": "gjf6lzfPROk",
+    "file": "/mypage/public/images/points-pawel_czerwinski-gjf6lzfPROk-w1600x900.webp",
+    "title": "3D render (Blender 3.1)",
+    "author": "Pawel Czerwinski",
+    "username": "pawel_czerwinski",
+    "url": "https://unsplash.com/photos/background-pattern-gjf6lzfPROk",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "query": "abstract gradient shapes blue purple"
+  },
+  {
+    "placement": "pricing",
+    "id": "9Liis2iHr8k",
+    "file": "/mypage/public/images/pricing-mglazier98-9Liis2iHr8k-w1600x900.webp",
+    "title": "a group of circular lights sitting on top of a field",
+    "author": "Michael Glazier",
+    "username": "mglazier98",
+    "url": "https://unsplash.com/photos/a-group-of-circular-lights-sitting-on-top-of-a-field-9Liis2iHr8k",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "query": "geometric pattern light background"
+  },
+  {
+    "placement": "closing",
+    "id": "cKcRIZ3Xytg",
+    "file": "/mypage/public/images/closing-othentikisra-cKcRIZ3Xytg-w1600x900.webp",
+    "title": "We got all of our students ready to go see the Movie!",
+    "author": "israel palacio",
+    "username": "othentikisra",
+    "url": "https://unsplash.com/photos/group-of-people-holding-light-saber-cKcRIZ3Xytg",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "query": "team collaboration minimal light"
+  },
+  {
+    "placement": "profile",
+    "id": "VXUem-SEtJg",
+    "file": "/mypage/public/images/profile-nublson-VXUem-SEtJg-w1600x900.webp",
+    "title": "macbook pro beside white ceramic mug on black table",
+    "author": "Nubelson Fernandes",
+    "username": "nublson",
+    "url": "https://unsplash.com/photos/macbook-pro-beside-white-ceramic-mug-on-black-table-VXUem-SEtJg",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "query": "developer workspace laptop minimal"
+  },
+  {
+    "placement": "faq",
+    "id": "eEpIAx5mGOI",
+    "file": "/mypage/public/images/faq-themelessly-eEpIAx5mGOI-w1600x900.webp",
+    "title": "Blender and Python, Geometric Tiling",
+    "author": "Shaawn",
+    "username": "themelessly",
+    "url": "https://unsplash.com/photos/a-close-up-view-of-a-textured-surface-eEpIAx5mGOI",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "query": "question mark pattern minimal"
   }
 ]
-
