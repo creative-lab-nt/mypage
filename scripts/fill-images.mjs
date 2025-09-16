@@ -188,6 +188,27 @@ async function main() {
       });
     }
 
+    // Step画像の置換（例: /images/steps/step-1.svg → ダウンロード画像）
+    const stepNumMatch = /^step(\d+)$/.exec(key);
+    if (stepNumMatch) {
+      const n = stepNumMatch[1];
+      const reStepImg = new RegExp(`(<img[^>]*src=\"[^\"]*images/steps/step-${n}\\.(?:svg|png|jpe?g)[^\"]*\"[^>]*)(>)`, 'i');
+      if (reStepImg.test(html)) {
+        html = html.replace(reStepImg, (m, start, end) => {
+          let tag = start;
+          tag = upsertAttr(tag, 'src', webPath);
+          const altOld = getAttr(tag, 'alt');
+          const altTextStep = String(conf.alt || photo.alt_description || photo.description || '').trim();
+          if (!altOld || !String(altOld).trim()) tag = upsertAttr(tag, 'alt', altTextStep);
+          tag = upsertAttr(tag, 'loading', 'lazy');
+          tag = upsertAttr(tag, 'decoding', 'async');
+          if (width) tag = upsertAttr(tag, 'width', String(width));
+          if (height) tag = upsertAttr(tag, 'height', String(height));
+          return tag + end;
+        });
+      }
+    }
+
     // data-image-key="key" の差し替え（img）
     const reImg = new RegExp(`(<img[^>]*\\bdata-image-key=\"${escapeRegExp(key)}\"[^>]*)(>)`, 'i');
     if (reImg.test(html)) {
